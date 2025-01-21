@@ -12,7 +12,7 @@
     <h3>Price: $ 50</h3>
     <form action="{{route('processTransaction')}}" method="POST">
         @csrf
-        <input name="price" type="hidden" value="20">
+        <input name="price" type="hidden" value="50">
         <button type="submit" class="btn btn-primary m-3">Pay with PayPal</button>
     </form>
 
