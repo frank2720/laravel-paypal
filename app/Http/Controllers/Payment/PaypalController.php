@@ -19,7 +19,7 @@ class PaypalController extends Controller
     {
         $provider = new PayPalClient;
         $provider->setApiCredentials(config('paypal'));
-        $PayPal_Token = $provider->getAccessToken();
+        $provider->getAccessToken();
 
         $response = $provider->createOrder(
             [
@@ -61,7 +61,7 @@ class PaypalController extends Controller
     {
         $provider = new PayPalClient;
         $provider->setApiCredentials(config('paypal'));
-        $PayPal_Token = $provider->getAccessToken();
+        $provider->getAccessToken();
         $response = $provider->capturePaymentOrder($request->token);
 
         if (isset($response['status']) && $response['status'] == 'COMPLETED') {
